@@ -1,4 +1,7 @@
 #include <Arduino.h>
+#include <U8g2lib.h>
+#include <SPI.h>
+#include <Wire.h>
 
 // put function declarations here:
 int myFunction(int, int);
