@@ -48,11 +48,7 @@
     };
     struct screenData 
     {
-        RowData Row1;
-        RowData Row2;
-        RowData Row3;
-        RowData Row4;
-        RowData Row5;
+        RowData Row[5];
     };
     extern screenData Screen[5];
     extern screenData ScreenActual;
