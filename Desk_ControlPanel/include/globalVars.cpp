@@ -23,13 +23,13 @@ void loop() {
     EncoderChA = digitalRead(3);
     EncoderChB = digitalRead(4);
     EncoderBtn = digitalRead(5);
-    digitalWrite(6, (Relay_1 == true) ? HIGH : LOW);
-    digitalWrite(7, (Relay_2 == true) ? HIGH : LOW);
-    digitalWrite(8, (Relay_3 == true) ? HIGH : LOW);
-    digitalWrite(9, (Relay_4 == true) ? HIGH : LOW);
-    digitalWrite(10, (Relay_5 == true) ? HIGH : LOW);
-    digitalWrite(11, (Relay_6 == true) ? HIGH : LOW);
-    digitalWrite(12, (Relay_7 == true) ? HIGH : LOW);
-    digitalWrite(13, (Relay_8 == true) ? HIGH : LOW);
+    digitalWrite(6,  (Relay[0] == true) ? HIGH : LOW);
+    digitalWrite(7,  (Relay[1] == true) ? HIGH : LOW);
+    digitalWrite(8,  (Relay[2] == true) ? HIGH : LOW);
+    digitalWrite(9,  (Relay[3] == true) ? HIGH : LOW);
+    digitalWrite(10, (Relay[4] == true) ? HIGH : LOW);
+    digitalWrite(11, (Relay[5] == true) ? HIGH : LOW);
+    digitalWrite(12, (Relay[6] == true) ? HIGH : LOW);
+    digitalWrite(13, (Relay[7] == true) ? HIGH : LOW);
 
 }    

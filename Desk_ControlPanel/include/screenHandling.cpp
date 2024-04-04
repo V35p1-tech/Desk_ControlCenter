@@ -17,19 +17,19 @@ void setup() {
     Row_Selected = 1;
     Screen_Selected = Screen_1;
 
-    strcpy(Screen[Screen_1].Row[1].Text, "Strona 1 -Wiersz 1");
-    strcpy(Screen[Screen_1].Row[2].Text, "Strona 1 -Wiersz 2");
-    strcpy(Screen[Screen_1].Row[3].Text, "Strona 1 -Wiersz 3");
-    strcpy(Screen[Screen_1].Row[4].Text, "Strona 1 -Wiersz 4");
+    strcpy(Screen[Screen_1].Row[Row_1].Text, "Strona 1 -Wiersz 1");
+    strcpy(Screen[Screen_1].Row[Row_2].Text, "Strona 1 -Wiersz 2");
+    strcpy(Screen[Screen_1].Row[Row_3].Text, "Strona 1 -Wiersz 3");
+    strcpy(Screen[Screen_1].Row[Row_4].Text, "Strona 1 -Wiersz 4");
 
-    strcpy(Screen[Screen_2].Row[1].Text, "Strona 2 -Wiersz 1");
-    strcpy(Screen[Screen_2].Row[2].Text, "Strona 2 -Wiersz 2");
-    strcpy(Screen[Screen_2].Row[3].Text, "Strona 2 -Wiersz 3");
-    strcpy(Screen[Screen_2].Row[4].Text, "Strona 2 -Wiersz 4"); 
+    strcpy(Screen[Screen_2].Row[Row_1].Text, "Strona 2 -Wiersz 1");
+    strcpy(Screen[Screen_2].Row[Row_2].Text, "Strona 2 -Wiersz 2");
+    strcpy(Screen[Screen_2].Row[Row_3].Text, "Strona 2 -Wiersz 3");
+    strcpy(Screen[Screen_2].Row[Row_4].Text, "Strona 2 -Wiersz 4"); 
 
-    strcpy(Screen[Screen_1].Row[5].Text, "Nastepny ekran");
-    strcpy(Screen[Screen_2].Row[5].Text, "Nastepny ekran");
-    strcpy(Screen[Screen_3].Row[5].Text, "Nastepny ekran");
+    strcpy(Screen[Screen_1].Row[Row_5].Text, "Nastepny ekran");
+    strcpy(Screen[Screen_2].Row[Row_5].Text, "Nastepny ekran");
+    strcpy(Screen[Screen_3].Row[Row_5].Text, "Nastepny ekran");
 
     // DECLARE HERE LABELS FOR ROWS ^^
 }
@@ -45,7 +45,7 @@ void loop() {
         Display.drawStr(Row_Text_Y,Row_4_X,ScreenActual.Row[4].Text);
         Display.drawStr(Row_Text_Y,Row_5_X,ScreenActual.Row[5].Text);  
 
-    for (int i = 1; i <= 5; i++) {
+    for (int i = Row_1; i <= Row_5; i++) {
         if (ScreenActual.Row[i].Activated == true) {
             Display.setFont(u8g2_font_unifont_t_symbols);
             Display.drawGlyph(118,((Row_Height + 2) * i), 0x2714);//2714 <- Checkbox 
